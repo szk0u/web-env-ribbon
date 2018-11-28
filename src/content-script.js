@@ -115,7 +115,7 @@
   });
 
   const displayRibbon = (await browser.storage.local.get('displayRibbon')).displayRibbon;
-  if (displayRibbon) {
+  if (typeof displayRibbon === 'undefined' || displayRibbon) {
     appendRibbon();
   }
 
