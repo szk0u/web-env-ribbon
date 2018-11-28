@@ -7,6 +7,12 @@
   "homepage_url": "https://github.com/szk0u/web-env-ribbon",
   "default_locale": "ja",
 
+  "applications": {
+    "gecko": {
+      "id": "web-ext-env@example.com"
+    }
+  },
+
   "options_ui": {
     "page": "src/settings/options.html"
   },
