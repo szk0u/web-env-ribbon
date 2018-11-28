@@ -1,0 +1,40 @@
+{
+
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.0",
+  "homepage_url": "https://github.com/szk0u/web-env-ribbon",
+  "default_locale": "ja",
+
+  "options_ui": {
+    "page": "src/settings/options.html"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/ribbon_orange.png",
+    "default_title": "web-env-ribbon",
+    "default_popup": "src/popup/popup.html"
+  },
+
+  "background": {
+    "scripts": [
+      "lib/browser-polyfill.min.js",
+      "src/background.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches" : ["<all_urls>"],
+      "js": ["lib/browser-polyfill.min.js", "lib/util.js", "src/content-script.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "<all_urls>"
+  ]
+
+}

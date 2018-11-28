@@ -1,0 +1,16 @@
+.button {
+  margin-top: 10px;
+}
+
+.container {
+  margin: 10px;
+}
+
+.setting-item-description {
+  list-style-type: disc;
+  margin-left: 15px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}

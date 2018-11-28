@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bulma.min.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+<div class="container">
+  <form>
+    <div>
+      <p>
+        リボンの設定はJSON形式で記述します。
+      </p>
+      <p>
+        設定例:
+      <pre>
+{
+  "items": [
+    {
+      "domain": "prod.example.com",
+      "text": "production",
+      "description": "本番環境です",
+      "hideOnMouseover": true,
+      "ribbonColor": "rgb(0, 136, 255, 0.8)"
+    },
+    {
+      "domain": "staging.example.com",
+      "text": "ステージング"
+    }
+  ]
+}
+        </pre>
+      </p>
+      <p>
+      <ul class="setting-item-description">
+        <li>domain: リボンを表示するドメイン。</li>
+        <li>text: リボンに表示するテキスト。</li>
+        <li>description: リボンに表示するツールチップ。省略可能です。</li>
+        <li>hideOnMouseover: リボンの上にマウスカーソルを移動するとリボンを隠す場合は true、そうでない場合は false。省略した場合 false。</li>
+        <li>ribbonColor: リボンの色。省略可能です。</li>
+      </ul>
+      </p>
+    </div>
+
+    <div id="message_area" class="mt-5"></div>
+    <div class="mt-5">
+      <label for="settingJson">設定(JSON)</label><br>
+      <textarea id="settingJson" cols="60" rows="15"></textarea><br>
+    </div>
+    <div class="mt-5">
+      <label for="settingUrls">JSONを返すURL（カンマ区切りで複数指定可能）</label><br>
+      <textarea id="settingUrls" cols="60" rows="5"></textarea><br>
+    </div>
+    <button class="button" type="submit">保存</button>
+  </form>
+</div>
+
+<script src="../../lib/browser-polyfill.min.js"></script>
+<script src="../../lib/util.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
